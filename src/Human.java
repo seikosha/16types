@@ -1,3 +1,5 @@
+import java.util.concurrent.ThreadLocalRandom;
+
 public class Human {
 
     public static void main(String[] args) {
@@ -51,82 +53,86 @@ public class Human {
 
     //create the "Physical" indicator
     public static int setPhysical(int x) {
+        if (Math.abs(physical) <= 100) {
+            physical += x;
+        } else if(physical > 100) {
+            physical = 100;
+        } else {
+            physical = -100;
+        }
         return physical;
     }
 
     //create the "Safety" indicator
     public static int setSafety(int x) {
+        if (Math.abs(safety) <= 100) {
+            safety += x;
+        } else if(safety > 100) {
+            safety = 100;
+        } else {
+            safety = -100;
+        }
         return safety;
     }
 
     //create the "Social" indicator
     public static int setSocial(int x) {
-        if (Math.abs(social) < 100) {
-            social = x;
-            return social;
-        } else if(social >= 100) {
+        if (Math.abs(social) <= 100) {
+            social += x;
+        } else if(social > 100) {
             social = 100;
-            return social;
         } else {
             social = -100;
-            return social;
         }
+        return social;
     }
 
     //create the "Respect" indicator
     public static int setRespect(int x) {
-        if (Math.abs(x) < 100) {
-            respect = x;
-            return respect;
+        if (Math.abs(respect) <= 100) {
+            respect += x;
         } else if(respect > 100) {
             respect = 100;
-            return respect;
         } else {
             respect = -100;
-            return respect;
         }
+        return respect;
     }
 
     //create the "Self-Achievement" indicator
     public static int setSelfAchievement(int x) {
-        if (Math.abs(x) < 100) {
-            selfAchievement = x;
-            return selfAchievement;
+        if (Math.abs(selfAchievement) <= 100) {
+            selfAchievement += x;
         } else if(selfAchievement > 100) {
             selfAchievement = 100;
-            return selfAchievement;
         } else {
             selfAchievement = -100;
-            return selfAchievement;
         }
+        return selfAchievement;
     }
 
     //create the "Over-Achievement" indicator
     public static int setOverAchievement(int x) {
-        if (Math.abs(x) < 100) {
-            overAchievement = x;
-            return overAchievement;
+        if (Math.abs(overAchievement) <= 100) {
+            overAchievement += x;
         } else if(overAchievement > 100) {
             overAchievement = 100;
-            return overAchievement;
         } else {
             overAchievement = -100;
-            return overAchievement;
         }
+        return overAchievement;
     }
 
     //create the "Feeling" indicator
     public static int setFeeling(int x) {
-        if (Math.abs(x) < 100) {
-            feeling = x;
-            return feeling;
+        if (Math.abs(feeling) <= 100) {
+            feeling += x;
         } else if(feeling > 100) {
             feeling = 100;
-            return feeling;
         } else {
             feeling = -100;
-            return feeling;
         }
+        return feeling;
     }
 
     //create the "Affection" indicator
