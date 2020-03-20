@@ -1,2 +1,4 @@
-public class Adam extends Human {
+public class Adam {
+    public static void main(String[] args) {
+    }
 }

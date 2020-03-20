@@ -6,9 +6,6 @@ public class Human {
 
     }
 
-    public Human() {
-    }
-
     public static int physical;
     public static int safety;
     public static int social;
@@ -141,36 +138,10 @@ public class Human {
         return affection;
     }
 
-//    //abstract method for counting indicators
-//    public abstract static class physical {
-//
-//    }
-//
-//    public abstract static class safety {
-//
-//    }
-//
-//    public abstract static class social {
-//
-//    }
-//
-//    public abstract static class respect {
-//
-//    }
-//
-//    public abstract static class selfAchievement {
-//
-//    }
-//
-//    public abstract static class overAchievement {
-//
-//    }
-//
-//    public abstract static class feeling {
-//
-//    }
-//
-//    public abstract static class affection {
-//
-//    }
+    //define 16 methods of all the personal types
+    public static void ISTJ() {
+
+    }
+
+
 }
