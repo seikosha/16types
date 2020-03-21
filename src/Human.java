@@ -50,97 +50,223 @@ public class Human {
 
     //create the "Physical" indicator
     public static int setPhysical(int x) {
-        if (Math.abs(physical) <= 100) {
-            physical += x;
-        } else if(physical > 100) {
-            physical = 100;
-        } else {
-            physical = -100;
-        }
+        physical += x;
         return physical;
     }
 
     //create the "Safety" indicator
     public static int setSafety(int x) {
-        if (Math.abs(safety) <= 100) {
-            safety += x;
-        } else if(safety > 100) {
-            safety = 100;
-        } else {
-            safety = -100;
-        }
+        safety += x;
         return safety;
     }
 
     //create the "Social" indicator
     public static int setSocial(int x) {
-        if (Math.abs(social) <= 100) {
-            social += x;
-        } else if(social > 100) {
-            social = 100;
-        } else {
-            social = -100;
-        }
+        social += x;
         return social;
     }
 
     //create the "Respect" indicator
     public static int setRespect(int x) {
-        if (Math.abs(respect) <= 100) {
-            respect += x;
-        } else if(respect > 100) {
-            respect = 100;
-        } else {
-            respect = -100;
-        }
+        respect += x;
         return respect;
     }
 
     //create the "Self-Achievement" indicator
     public static int setSelfAchievement(int x) {
-        if (Math.abs(selfAchievement) <= 100) {
-            selfAchievement += x;
-        } else if(selfAchievement > 100) {
-            selfAchievement = 100;
-        } else {
-            selfAchievement = -100;
-        }
+        selfAchievement += x;
         return selfAchievement;
     }
 
     //create the "Over-Achievement" indicator
     public static int setOverAchievement(int x) {
-        if (Math.abs(overAchievement) <= 100) {
-            overAchievement += x;
-        } else if(overAchievement > 100) {
-            overAchievement = 100;
-        } else {
-            overAchievement = -100;
-        }
+        overAchievement += x;
         return overAchievement;
     }
 
     //create the "Feeling" indicator
     public static int setFeeling(int x) {
-        if (Math.abs(feeling) <= 100) {
-            feeling += x;
-        } else if(feeling > 100) {
-            feeling = 100;
-        } else {
-            feeling = -100;
-        }
+        feeling += x;
         return feeling;
     }
 
     //create the "Affection" indicator
     public static int setAffection(int x) {
-        affection = x;
+        affection += x;
         return affection;
     }
 
-    //define 16 methods of all the personal types
-    public static void ISTJ() {
+    //define 16 methods of all the personal types, use ISTJ type to show the logic
+    public static void ISTJSelf() {
+        //build the 'inspector' trait
+        int randomChanges1 = ThreadLocalRandom.current().nextInt(0,1+1);
+        setSafety(randomChanges1);
+        int randomChanges2 = ThreadLocalRandom.current().nextInt(0,3+1);
+        setRespect(randomChanges2);
 
+        //build the 'aloof' trait
+        int randomChanges3 = ThreadLocalRandom.current().nextInt(-10,-5+1);
+        setSocial(randomChanges3);
+        int randomChanges4 = ThreadLocalRandom.current().nextInt(-2,1);
+        setSelfAchievement(randomChanges4);
+        setOverAchievement(randomChanges1);
+        int randomChanges5 = ThreadLocalRandom.current().nextInt(-5,-1+1);
+        setAffection(randomChanges5);
+
+        //build the 'devotion' trait
+        int randomChanges6 = ThreadLocalRandom.current().nextInt(-1,1);
+        setPhysical(randomChanges6);
+        int randomChanges7 = ThreadLocalRandom.current().nextInt(-5,1);
+        setSocial(randomChanges7);
+        int randomChanges8 = ThreadLocalRandom.current().nextInt(-2,2+1);
+        setRespect(randomChanges8);
+        int randomChanges9 = ThreadLocalRandom.current().nextInt(0,2+1);
+        setSelfAchievement(randomChanges9);
+        int randomChanges10 = ThreadLocalRandom.current().nextInt(1,2+1);
+        setOverAchievement(randomChanges10);
+
+        //build the 'trustful' trait
+        setSafety(randomChanges1);
+        int randomChanges11 = ThreadLocalRandom.current().nextInt(-2,5);
+        setSocial(randomChanges11);
+        setRespect(randomChanges9);
+        setSelfAchievement(randomChanges2);
+        setOverAchievement(randomChanges1);
+        setFeeling(randomChanges1);
+        setAffection(randomChanges1);
+
+        //build the 'truth wins out over tact' trait
+        setSocial(randomChanges7);
+        int randomChanges12 = ThreadLocalRandom.current().nextInt(-3,1+1);
+        setRespect(randomChanges12);
+        setSelfAchievement(randomChanges12);
+        setOverAchievement(randomChanges1);
+        int randomChanges13 = ThreadLocalRandom.current().nextInt(-4,1+1);
+        setFeeling(randomChanges13);
+        setAffection(randomChanges6);
+
+        //build the 'keep feeling to themselves' trait
+        setPhysical(randomChanges6);
+        setSocial(randomChanges7);
+        setSelfAchievement(randomChanges6);
+        setOverAchievement(randomChanges6);
+        setFeeling(randomChanges6);
+        setAffection(randomChanges13);
+
+        //build the 'traditional' trait
+        int randomChanges14 = ThreadLocalRandom.current().nextInt(-1,3+1);
+        setSafety(randomChanges14);
+        setSelfAchievement(randomChanges1);
+        int randomChanges15 = ThreadLocalRandom.current().nextInt(-1,1+1);
+        setFeeling(randomChanges15);
+    }
+
+    public static void ISTJOpposite() {
+        //build the 'inspector' trait
+        int randomChanges1 = ThreadLocalRandom.current().nextInt(0,1+1);
+        setSafety(randomChanges1);
+        int randomChanges2 = ThreadLocalRandom.current().nextInt(-5,1);
+        setSocial(randomChanges2);
+
+        //build the 'aloof' trait
+        int randomChanges3 = ThreadLocalRandom.current().nextInt(-10,-5+1);
+        setSocial(randomChanges3);
+        int randomChanges4 = ThreadLocalRandom.current().nextInt(-2,1);
+        setRespect(randomChanges4);
+        int randomChanges5 = ThreadLocalRandom.current().nextInt(-5,-1+1);
+        setFeeling(randomChanges5);
+        setAffection(randomChanges5);
+
+        //build the 'devotion' trait
+        setSocial(randomChanges2);
+        int randomChanges6 = ThreadLocalRandom.current().nextInt(-2,4+1);
+        setRespect(randomChanges6);
+
+        //build the 'trustful' trait
+        int randomChanges7 = ThreadLocalRandom.current().nextInt(2,5+1);
+        setSafety(randomChanges7);
+        int randomChanges8 = ThreadLocalRandom.current().nextInt(-1,3+1);
+        setSocial(randomChanges8);
+        int randomChanges9 = ThreadLocalRandom.current().nextInt(0,2+1);
+        setRespect(randomChanges9);
+        int randomChanges10 = ThreadLocalRandom.current().nextInt(0,3+1);
+        setFeeling(randomChanges10);
+        setAffection(randomChanges1);
+
+        //build the 'truth wins out over tact' trait
+        int randomChanges11 = ThreadLocalRandom.current().nextInt(-1,2);
+        setSafety(randomChanges11);
+        setSocial(randomChanges3);
+        setRespect(randomChanges2);
+        int randomChanges12 = ThreadLocalRandom.current().nextInt(-4,1+1);
+        setFeeling(randomChanges12);
+        int randomChanges13 = ThreadLocalRandom.current().nextInt(-1,1);
+        setAffection(randomChanges13);
+
+        //build the 'keep feeling to themselves' trait
+        setSocial(randomChanges2);
+        setFeeling(randomChanges13);
+        setAffection(randomChanges13);
+
+        //build the 'traditional' trait
+        setRespect(randomChanges1);
+        int randomChanges14 = ThreadLocalRandom.current().nextInt(-1,1+1);
+        setFeeling(randomChanges14);
+    }
+    //briefly build the 'INTJ' type
+    public static void INTJSelf() {
+        int randomChanges1 = ThreadLocalRandom.current().nextInt(-3,1);
+        setSafety(randomChanges1);
+        int randomChanges2 = ThreadLocalRandom.current().nextInt(-5,1);
+        setSocial(randomChanges2);
+        setRespect(randomChanges2);
+        int randomChanges3 = ThreadLocalRandom.current().nextInt(0,2+1);
+        setSelfAchievement(randomChanges3);
+        int randomChanges4 = ThreadLocalRandom.current().nextInt(0,7+1);
+        setOverAchievement(randomChanges4);
+        int randomChanges5 = ThreadLocalRandom.current().nextInt(-2,1);
+        setFeeling(randomChanges5);
+        setPhysical(randomChanges5);
+    }
+
+    public static void INTJOpposite() {
+        int randomChanges1 = ThreadLocalRandom.current().nextInt(-1,1);
+        setSafety(randomChanges1);
+        int randomChanges2 = ThreadLocalRandom.current().nextInt(-9,1);
+        setSocial(randomChanges2);
+        int randomChanges3 = ThreadLocalRandom.current().nextInt(-2,1);
+        setRespect(randomChanges3);
+        int randomChanges4 = ThreadLocalRandom.current().nextInt(0,1+1);
+        setSelfAchievement(randomChanges4);
+        setOverAchievement(randomChanges4);
+        int randomChanges5 = ThreadLocalRandom.current().nextInt(-3,1);
+        setFeeling(randomChanges5);
+        setAffection(randomChanges1);
+    }
+
+    public static void INTPSelf() {
+        int randomChanges1 = ThreadLocalRandom.current().nextInt(-4,1);
+        setPhysical(randomChanges1);
+        int randomChanges2 = ThreadLocalRandom.current().nextInt(0,1+1);
+        setSafety(randomChanges2);
+        int randomChanges3 = ThreadLocalRandom.current().nextInt(0,5+1);
+        setSocial(randomChanges3);
+        int randomChanges4 = ThreadLocalRandom.current().nextInt(0,2+1);
+        setOverAchievement(randomChanges4);
+        setFeeling(randomChanges4);
+        setAffection(randomChanges2);
+    }
+
+    public static void INTPOpposite() {
+        int randomChanges1 = ThreadLocalRandom.current().nextInt(0,4+1);
+        setSafety(randomChanges1);
+        int randomChanges2 = ThreadLocalRandom.current().nextInt(0,2+1);
+        setSocial(randomChanges2);
+        int randomChanges3 = ThreadLocalRandom.current().nextInt(0,1+1);
+        setRespect(randomChanges3);
+        setSelfAchievement(randomChanges3);
+        setFeeling(randomChanges3);
+        setAffection(randomChanges3);
     }
 
 
