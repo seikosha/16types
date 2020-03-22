@@ -1,13 +1,14 @@
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Interaction {
 
     public static void main(String[] args) {
-        userInputTypesA();
-        userInputTypesB();
         influenceAdam();
         influenceEve();
+
     }
 
     //method for getting user input days
@@ -22,24 +23,33 @@ public class Interaction {
     public static String userInputTypesA() {
         System.out.println("Please tell us the personal types of Adam:");
         Scanner type1 = new Scanner(System.in);
-        String typeA = type1.nextLine();
-        return typeA;
+        return type1.nextLine();
     }
 
     public static String userInputTypesB() {
         System.out.println("Please tell us the personal types of Eve:");
         Scanner type2 = new Scanner(System.in);
-        String typeB = type2.nextLine();
-        return typeB;
+        return type2.nextLine();
     }
 
     //standard influence on Adam, simulating the natural changes of the indicators
-    private static int n = userInputDays();;
+    private static int n = userInputDays();
+    private static String typeA = userInputTypesA() + "Self()";
+    private static String typeB = userInputTypesB() + "Opposite()";
+
+
+
+    static intjSelf test1 = new intjSelf();
+
+
+
+
+    //    void[] typeList = {(Human.INTJSelf()), (Human.INTPSelf())};
     public static void influenceAdam() {
 
         for (int i = 0; i <= n ; i++) {
-            Human.INTJSelf();
-            Human.INTPOpposite();
+            test1.main();
+//            Human.INTPOpposite();
         }
 
         for (int i = 0; i <= n; i++) {
@@ -98,7 +108,7 @@ public class Interaction {
 
         for (int i = 0; i <= n ; i++) {
             Human.INTPSelf();
-            Human.INTJOpposite();
+//            Human.INTJOpposite();
         }
 
         for (int i = 0; i <= n; i++) {

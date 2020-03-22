@@ -213,22 +213,22 @@ public class Human {
         int randomChanges14 = ThreadLocalRandom.current().nextInt(-1,1+1);
         setFeeling(randomChanges14);
     }
-    //briefly build the 'INTJ' type
-    public static void INTJSelf() {
-        int randomChanges1 = ThreadLocalRandom.current().nextInt(-3,1);
-        setSafety(randomChanges1);
-        int randomChanges2 = ThreadLocalRandom.current().nextInt(-5,1);
-        setSocial(randomChanges2);
-        setRespect(randomChanges2);
-        int randomChanges3 = ThreadLocalRandom.current().nextInt(0,2+1);
-        setSelfAchievement(randomChanges3);
-        int randomChanges4 = ThreadLocalRandom.current().nextInt(0,7+1);
-        setOverAchievement(randomChanges4);
-        int randomChanges5 = ThreadLocalRandom.current().nextInt(-2,1);
-        setFeeling(randomChanges5);
-        setPhysical(randomChanges5);
-    }
-
+//    //briefly build the 'INTJ' type
+//    public static void INTJSelf() {
+//        int randomChanges1 = ThreadLocalRandom.current().nextInt(-3,1);
+//        setSafety(randomChanges1);
+//        int randomChanges2 = ThreadLocalRandom.current().nextInt(-5,1);
+//        setSocial(randomChanges2);
+//        setRespect(randomChanges2);
+//        int randomChanges3 = ThreadLocalRandom.current().nextInt(0,2+1);
+//        setSelfAchievement(randomChanges3);
+//        int randomChanges4 = ThreadLocalRandom.current().nextInt(0,7+1);
+//        setOverAchievement(randomChanges4);
+//        int randomChanges5 = ThreadLocalRandom.current().nextInt(-2,1);
+//        setFeeling(randomChanges5);
+//        setPhysical(randomChanges5);
+//    }
+//
     public static void INTJOpposite() {
         int randomChanges1 = ThreadLocalRandom.current().nextInt(-1,1);
         setSafety(randomChanges1);
