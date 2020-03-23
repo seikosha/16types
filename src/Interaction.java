@@ -1,15 +1,46 @@
-import org.w3c.dom.ls.LSOutput;
-
+import java.lang.reflect.Method;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Interaction {
 
-    public static void main(String[] args) {
-        influenceAdam();
-        influenceEve();
+    public static void main(String[] args) throws Exception {
+
+//        influenceAdam();
+//        influenceEve();
+        Class<types> typesClass = types.class;
+        Method[] methods = typesClass.getDeclaredMethods();
+        for (Method method : methods) {
+            String name = method.getName();
+//            System.out.println(name);
+        }
+
+        types t = new types();
+        for (Method method : methods) {
+            String name = method.getName();
+            if (name.equals(typeA)) {
+                Method SPEAK = typesClass.getMethod(typeA);
+                SPEAK.invoke(t);
+            }
+
+        }
+
+        System.out.println(typeA);
+//        for (Method method : methods) {
+//            System.out.println(method);
+//        }
+//        System.out.println(methods);
+//        System.out.println(methods[1]);
+//        methods[1].invoke(t);
+//        }
+
+
 
     }
+
+    private static int n = userInputDays();
+    private static String typeA = userInputTypesA() + "Self";
+    private static String typeB = userInputTypesB() + "Opposite";
 
     //method for getting user input days
     public static Integer userInputDays() {
@@ -32,24 +63,16 @@ public class Interaction {
         return type2.nextLine();
     }
 
+
+
     //standard influence on Adam, simulating the natural changes of the indicators
-    private static int n = userInputDays();
-    private static String typeA = userInputTypesA() + "Self()";
-    private static String typeB = userInputTypesB() + "Opposite()";
-
-
-
-    static intjSelf test1 = new intjSelf();
-
-
-
-
-    //    void[] typeList = {(Human.INTJSelf()), (Human.INTPSelf())};
     public static void influenceAdam() {
 
         for (int i = 0; i <= n ; i++) {
-            test1.main();
-//            Human.INTPOpposite();
+//            Class HumanClass = Human.class;
+//            Method intjSelf_method = HumanClass.getMethod("intjSelf");
+//            Human h = new Human();
+//            intjSelf_method.invoke(h);
         }
 
         for (int i = 0; i <= n; i++) {
@@ -104,11 +127,13 @@ public class Interaction {
         System.out.println("=============================");
     }
 
-    public static void influenceEve() {
+    public static void influenceEve() throws Exception {
 
-        for (int i = 0; i <= n ; i++) {
-            Human.INTPSelf();
-//            Human.INTJOpposite();
+        for (int i = 0; i <= n ; i++)  {
+//            Class HumanClass = Human.class;
+//            Method intjSelf_method = HumanClass.getMethod("intjSelf");
+//            Human h = new Human();
+//            intjSelf_method.invoke(h);
         }
 
         for (int i = 0; i <= n; i++) {
