@@ -15,39 +15,6 @@ public class Human {
     public static int feeling;
     public static int affection;
 
-    //getter of all indicators
-    public static int getPhysical() {
-        return physical;
-    }
-
-    public static int getSafety() {
-        return safety;
-    }
-
-    public static int getSocial() {
-        return social;
-    }
-
-    public static int getRespect() {
-        return respect;
-    }
-
-    public static int getSelfAchievement() {
-        return selfAchievement;
-    }
-
-    public static int getOverAchievement() {
-        return overAchievement;
-    }
-
-    public static int getFeeling() {
-        return feeling;
-    }
-
-    public static int getAffection() {
-        return affection;
-    }
-
     //create the "Physical" indicator
     public static int setPhysical(int x) {
         physical += x;
