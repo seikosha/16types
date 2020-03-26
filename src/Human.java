@@ -62,6 +62,4 @@ public class Human {
         affection += x;
         return affection;
     }
-
-
 }

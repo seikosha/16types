@@ -358,11 +358,204 @@ public class types extends Human {
     }
 
     public static void esfjSelf() {
-
+        int randomChanges1 = ThreadLocalRandom.current().nextInt(0,3+1);
+        setPhysical(randomChanges1);
+        int randomChanges2 = ThreadLocalRandom.current().nextInt(-3,1);
+        setSafety(randomChanges2);
+        int randomChanges3 = ThreadLocalRandom.current().nextInt(-4,1);
+        setSocial(randomChanges3);
+        int randomChanges4 = ThreadLocalRandom.current().nextInt(-1,1);
+        setRespect(randomChanges4);
+        int randomChanges5 = ThreadLocalRandom.current().nextInt(0,5+1);
+        setSelfAchievement(randomChanges5);
+        int randomChanges6 = ThreadLocalRandom.current().nextInt(-2,2+1);
+        setFeeling(randomChanges6);
+        setAffection(randomChanges4);
     }
 
     public static void esfjOpposite() {
-
+        int randomChanges1 = ThreadLocalRandom.current().nextInt(0,1+1);
+        setPhysical(randomChanges1);
+        int randomChanges2 = ThreadLocalRandom.current().nextInt(0,4+1);
+        setSafety(randomChanges2);
+        int randomChanges3 = ThreadLocalRandom.current().nextInt(-2,1);
+        setSocial(randomChanges3);
+        setRespect(randomChanges3);
+        setSelfAchievement(randomChanges1);
+        int randomChanges4 = ThreadLocalRandom.current().nextInt(-4,2+1);
+        setFeeling(randomChanges4);
     }
 
+    public static void entpSelf() {
+        int randomChanges1 = ThreadLocalRandom.current().nextInt(0,9+1);
+        setPhysical(randomChanges1);
+        int randomChanges2 = ThreadLocalRandom.current().nextInt(0,1+1);
+        setSafety(randomChanges2);
+        setSocial(randomChanges2);
+        int randomChanges3 = ThreadLocalRandom.current().nextInt(0,3+1);
+        setRespect(randomChanges3);
+        int randomChanges4 = ThreadLocalRandom.current().nextInt(0,8+1);
+        setSelfAchievement(randomChanges4);
+        setOverAchievement(randomChanges2);
+        setAffection(randomChanges2);
+        int randomChanges5 = ThreadLocalRandom.current().nextInt(-1,1);
+        setFeeling(randomChanges5);
+    }
+
+    public static void entpOpposite() {
+        int randomChanges1 = ThreadLocalRandom.current().nextInt(-1,1);
+        setSafety(randomChanges1);
+        int randomChanges2 = ThreadLocalRandom.current().nextInt(0,3+1);
+        setSocial(randomChanges2);
+        int randomChanges3 = ThreadLocalRandom.current().nextInt(-2,1);
+        setRespect(randomChanges3);
+        setSelfAchievement(randomChanges2);
+        int randomChanges4 = ThreadLocalRandom.current().nextInt(0,1+1);
+        setFeeling(randomChanges4);
+        setAffection(randomChanges4);
+    }
+
+    public static void entjSelf() {
+        int randomChanges1 = ThreadLocalRandom.current().nextInt(0,6+1);
+        setSafety(randomChanges1);
+        int randomChanges2 = ThreadLocalRandom.current().nextInt(-2,2+1);
+        setSocial(randomChanges2);
+        int randomChanges3 = ThreadLocalRandom.current().nextInt(0,1+1);
+        setRespect(randomChanges3);
+        int randomChanges4 = ThreadLocalRandom.current().nextInt(0,3+1);
+        setSelfAchievement(randomChanges4);
+        int randomChanges5 = ThreadLocalRandom.current().nextInt(-1,1);
+        setFeeling(randomChanges5);
+    }
+
+    public static void entjOpposite() {
+        int randomChanges1 = ThreadLocalRandom.current().nextInt(0,4+1);
+        setSafety(randomChanges1);
+        int randomChanges2 = ThreadLocalRandom.current().nextInt(-2,2+1);
+        setSocial(randomChanges2);
+        int randomChanges3 = ThreadLocalRandom.current().nextInt(-1,1);
+        setSelfAchievement(randomChanges3);
+        int randomChanges4 = ThreadLocalRandom.current().nextInt(-2,1);
+        setFeeling(randomChanges4);
+    }
+
+    public static void infjSelf() {
+        int randomChanges1 = ThreadLocalRandom.current().nextInt(-1,1);
+        setPhysical(randomChanges1);
+        int randomChanges2 = ThreadLocalRandom.current().nextInt(-2,1);
+        setSafety(randomChanges2);
+        int randomChanges3 = ThreadLocalRandom.current().nextInt(-5,12+1);
+        setSocial(randomChanges3);
+        int randomChanges4 = ThreadLocalRandom.current().nextInt(-4,6+1);
+        setRespect(randomChanges4);
+        int randomChanges5 = ThreadLocalRandom.current().nextInt(0,9+1);
+        setSelfAchievement(randomChanges5);
+        int randomChanges6 = ThreadLocalRandom.current().nextInt(0,3+1);
+        setOverAchievement(randomChanges6);
+        int randomChanges7 = ThreadLocalRandom.current().nextInt(-2,11+1);
+        setFeeling(randomChanges7);
+        setAffection(randomChanges6);
+    }
+
+    public static void infjOpposite() {
+        int randomChanges1 = ThreadLocalRandom.current().nextInt(0,1+1);
+        setPhysical(randomChanges1);
+        int randomChanges2 = ThreadLocalRandom.current().nextInt(-2,4+1);
+        setSafety(randomChanges2);
+        int randomChanges3 = ThreadLocalRandom.current().nextInt(-7,17+1);
+        setSocial(randomChanges3);
+        int randomChanges4 = ThreadLocalRandom.current().nextInt(-2,4+1);
+        setRespect(randomChanges4);
+        int randomChanges5 = ThreadLocalRandom.current().nextInt(0,5+1);
+        setSelfAchievement(randomChanges5);
+        int randomChanges6 = ThreadLocalRandom.current().nextInt(0,2+1);
+        setOverAchievement(randomChanges6);
+        int randomChanges7 = ThreadLocalRandom.current().nextInt(-2,10+1);
+        setFeeling(randomChanges7);
+        setAffection(randomChanges6);
+    }
+
+    public static void infpSelf() {
+        int randomChanges1 = ThreadLocalRandom.current().nextInt(-3,1);
+        setPhysical(randomChanges1);
+        int randomChanges2 = ThreadLocalRandom.current().nextInt(-1,1);
+        setSocial(randomChanges2);
+        int randomChanges3 = ThreadLocalRandom.current().nextInt(0,2+1);
+        setRespect(randomChanges3);
+        int randomChanges4 = ThreadLocalRandom.current().nextInt(0,1+1);
+        setSelfAchievement(randomChanges4);
+        setOverAchievement(randomChanges4);
+        int randomChanges5 = ThreadLocalRandom.current().nextInt(-2,1);
+        setFeeling(randomChanges5);
+    }
+
+    public static void infpOpposite() {
+        int randomChanges1 = ThreadLocalRandom.current().nextInt(0,4+1);
+        setSafety(randomChanges1);
+        int randomChanges2 = ThreadLocalRandom.current().nextInt(0,1+1);
+        setSocial(randomChanges2);
+        setRespect(randomChanges2);
+        int randomChanges3 = ThreadLocalRandom.current().nextInt(-2,1);
+        setFeeling(randomChanges3);
+    }
+
+    public static void enfpSelf() {
+        int randomChanges1 = ThreadLocalRandom.current().nextInt(0,3+1);
+        setPhysical(randomChanges1);
+        int randomChanges2 = ThreadLocalRandom.current().nextInt(-2,1);
+        setSafety(randomChanges2);
+        int randomChanges3 = ThreadLocalRandom.current().nextInt(-2,16+1);
+        setSocial(randomChanges3);
+        int randomChanges4 = ThreadLocalRandom.current().nextInt(-1,1);
+        setRespect(randomChanges4);
+        int randomChanges5 = ThreadLocalRandom.current().nextInt(-2,3+1);
+        setSelfAchievement(randomChanges5);
+        int randomChanges6 = ThreadLocalRandom.current().nextInt(0,2+1);
+        setFeeling(randomChanges6);
+        int randomChanges7 = ThreadLocalRandom.current().nextInt(0,1+1);
+        setAffection(randomChanges7);
+    }
+
+    public static void enfpOpposite() {
+        int randomChanges1 = ThreadLocalRandom.current().nextInt(-5,1);
+        setSafety(randomChanges1);
+        int randomChanges2 = ThreadLocalRandom.current().nextInt(0,9+1);
+        setSocial(randomChanges2);
+        int randomChanges3 = ThreadLocalRandom.current().nextInt(-3,1);
+        setRespect(randomChanges3);
+        int randomChanges4 = ThreadLocalRandom.current().nextInt(0,1+1);
+        setSelfAchievement(randomChanges4);
+        int randomChanges5 = ThreadLocalRandom.current().nextInt(0,4+1);
+        setFeeling(randomChanges5);
+    }
+
+    public static void enfjSelf() {
+        int randomChanges1 = ThreadLocalRandom.current().nextInt(0,3+1);
+        setPhysical(randomChanges1);
+        int randomChanges2 = ThreadLocalRandom.current().nextInt(0,1+1);
+        setSafety(randomChanges2);
+        int randomChanges3 = ThreadLocalRandom.current().nextInt(0,14+1);
+        setSocial(randomChanges3);
+        int randomChanges4 = ThreadLocalRandom.current().nextInt(0,8+1);
+        setRespect(randomChanges4);
+        int randomChanges5 = ThreadLocalRandom.current().nextInt(0,12+1);
+        setSelfAchievement(randomChanges5);
+        setOverAchievement(randomChanges2);
+        int randomChanges6 = ThreadLocalRandom.current().nextInt(0,9+1);
+        setFeeling(randomChanges6);
+        setAffection(randomChanges2);
+    }
+
+    public static void enfjOpposite() {
+        int randomChanges1 = ThreadLocalRandom.current().nextInt(0,7+1);
+        setSafety(randomChanges1);
+        int randomChanges2 = ThreadLocalRandom.current().nextInt(0,14+1);
+        setSocial(randomChanges2);
+        int randomChanges3 = ThreadLocalRandom.current().nextInt(0,2+1);
+        setSelfAchievement(randomChanges3);
+        int randomChanges4 = ThreadLocalRandom.current().nextInt(0,9+1);
+        setFeeling(randomChanges4);
+        int randomChanges5 = ThreadLocalRandom.current().nextInt(0,1+1);
+        setAffection(randomChanges5);
+    }
 }
