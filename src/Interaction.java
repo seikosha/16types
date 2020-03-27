@@ -1,4 +1,5 @@
 import java.lang.reflect.Method;
+import java.util.Enumeration;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -109,9 +110,6 @@ public class Interaction {
             Human.setAffection(randomNum);
         }
 
-        int physicalBeforeInfluence = Human.physical;
-        System.out.println("Before Influence: " + Human.physical);
-
         for (int i = 0; i < n; i++) {
             Class<types> typesClass = types.class;
             Method[] methods = typesClass.getDeclaredMethods();
@@ -125,7 +123,15 @@ public class Interaction {
             }
         }
         int physicalAfterSelf = Human.physical;
-        System.out.println("After Self: " + physicalAfterSelf);
+        int safetyAfterSelf = Human.safety;
+        int socialAfterSelf = Human.social;
+        int respectAfterSelf = Human.respect;
+        int selfAchievementAfterSelf = Human.selfAchievement;
+        int overAchievementAfterSelf = Human.overAchievement;
+        int feelingAfterSelf = Human.feeling;
+        int affectionAfterSelf = Human.affection;
+        System.out.println(safetyAfterSelf);
+
 
         for (int i = 0; i < n; i++) {
             Class<types> typesClass = types.class;
@@ -140,33 +146,131 @@ public class Interaction {
             }
         }
         int physicalAfterOpposite = Human.physical;
-        System.out.println("After Opposite: " + physicalAfterOpposite);
+        int safetyAfterOpposite = Human.safety;
+        int socialAfterOpposite = Human.social;
+        int respectAfterOpposite = Human.respect;
+        int selfAchievementAfterOpposite = Human.selfAchievement;
+        int overAchievementAfterOpposite = Human.overAchievement;
+        int feelingAfterOpposite = Human.feeling;
+        int affectionAfterOpposite = Human.affection;
+        System.out.println(safetyAfterOpposite);
 
-        //show the results
+        System.out.println("Adam:");
+        //show the results, declare the variables to count the changes
+        int pp = Math.abs(physicalAfterOpposite - physicalAfterSelf);
+        int ppp = Math.abs(physicalAfterSelf);
+        double p = pp * 1.0/ppp;
 
-
-        int ii = Math.abs(physicalAfterOpposite - physicalAfterSelf);
-        System.out.println("ii = " + ii);
-        int iii = Math.abs(physicalAfterSelf);
-        System.out.println("iii = " + iii);
-        float i = ii/iii;
-        System.out.println("i = " + i);
-
-        if (physicalAfterOpposite >= 0) {
-            if (i < 0.5) {
-                System.out.print("Eve unintentionally invoked Adam's physical needs, now Adam indulges himself sometimes.  ");
-            } else if (i >= 0.5 && i < 1) {
-                System.out.println("Eve brought obvious changes to Adam's physical needs, now Adam becomes more lustful and gluttonous. ");
-            } else if (i >= 1) {
-                System.out.println("Eve brought tremendous changes to Adam's physical needs, now Adam can always feel his animal desire and have unstoppable impulsive to fulfill them. ");
+        //physical changes result output texts
+        if (physicalAfterOpposite >= 0 && physicalAfterOpposite - physicalAfterSelf >= 0) {
+            if (p < 0.5) {
+                System.out.println("Eve unintentionally invokes Adam's physical needs, now Adam indulges himself sometimes." );
+            } else if (p >= 0.5 && p < 1) {
+                System.out.println("Eve brings obvious changes to Adam's physical needs, now Adam becomes more lustful and gluttonous. ");
+            } else if (p >= 1) {
+                System.out.println("Eve brings tremendous changes to Adam's physical needs, now Adam can always feel his animal desire and have unstoppable impulsive to fulfill them. ");
+            }
+        } else if (physicalAfterOpposite >= 0 && physicalAfterOpposite - physicalAfterSelf < 0) {
+            if (p < 0.5) {
+                System.out.print("Eve does no efforts on Adams' good appetite on both food and women. ");
+            } else if (p >= 0.5 && p < 1) {
+                System.out.println("Although Eve shows no her disgust on body pressure, which does not stop Adam indulging himself sometimes. ");
+            } else if (p >= 1) {
+                System.out.println("Eve tries so hard to turn Adam into a more spiritual lifestyle, but Adam still cannot get himself out of the sensual pressure. ");
+            }
+        } else if (physicalAfterOpposite < 0 && physicalAfterOpposite - physicalAfterSelf <= 0) {
+            if (p < 0.5) {
+                System.out.println("Eve brought slightly changes to Adam's daily life, now Adam cares less about material life. ");
+            } else if (p >= 0.5 && p < 1) {
+                System.out.println("Eve brought obvious changes to Adam's physical needs, now Adam starts to feel tedious about chasing fancy foods, beautiful women etc. ");
+            } else if (p >= 1) {
+                System.out.println("Eve brought tremendous changes to Adam's physical needs, now Adam seems like stoic and show completely no interest in secular life. ");
             }
         } else {
-            if (i < 0.5) {
-                System.out.println("Eve brought slightly changes to Adam's daily life, now Adam cares less about material life. ");
-            } else if (i >= 0.5 && i < 1) {
-                System.out.println("Eve brought obvious changes to Adam's physical needs, now Adam starts to feel tedious about chasing fancy foods, beautiful women etc. ");
-            } else if (i >= 1) {
-                System.out.println("Eve brought tremendous changes to Adam's physical needs, now Adam seems like stoic and show completely no interest in secular life. ");
+            if (p < 0.5) {
+                System.out.println("Eve enjoys more food and lust than Adam, who seems a little bit tedious when turning into these stuffs. ");
+            } else if (p >= 0.5 && p < 1) {
+                System.out.println("Although Eve does obvious changes to Adam's physical needs, Adam still feel a little bit tedious about chasing fancy foods, beautiful women etc. ");
+            } else if (p >= 1) {
+                System.out.println("Eve tries so hard to seduce Adam, now Adam seems not disturbed by such sensual pressure. ");
+            }
+        }
+
+        //safety changes result output texts
+        int saa = Math.abs(safetyAfterOpposite - safetyAfterSelf);
+        int saaa = Math.abs(safetyAfterSelf);
+        double sa = saa * 1.0/saaa;
+
+        if (safetyAfterOpposite >= 0 && safetyAfterOpposite - safetyAfterSelf >= 0) {
+            if (sa < 0.5) {
+                System.out.println("Sometimes Eve can calms Adam down, makes him feel a little bit warm in this cold cruel world. ");
+            } else if (sa >= 0.5 && sa < 1) {
+                System.out.println("Eve's tenderness makes Adam constantly reminds of his mother. ");
+            } else if (sa >= 1) {
+                System.out.println("Eve's like a sun to Adam, bringing endless warmth.");
+            }
+        } else if (safetyAfterOpposite >= 0 && safetyAfterOpposite - safetyAfterSelf < 0) {
+            if (sa < 0.5) {
+                System.out.print("Eve is not so predictable which makes Adam worrying about sometimes. ");
+            } else if (sa >= 0.5 && sa < 1) {
+                System.out.println("Eve always makes life more insecure, even tough guy like Adam cannot stop worrying them.");
+            } else if (sa >= 1) {
+                System.out.println("Adam will feel much secure about life without Eve, she is way to worrisome. ");
+            }
+        } else if (safetyAfterOpposite < 0 && safetyAfterOpposite - safetyAfterSelf <= 0) {
+            if (sa < 0.5) {
+                System.out.println("Adam feel stressed when being with Eve, who drags him into the sea of insecure. ");
+            } else if (sa >= 0.5 && sa < 1) {
+                System.out.println("Adam feel the hostility of surrounding in daily life, especially when Eve breaks in. ");
+            } else if (sa >= 1) {
+                System.out.println("Adam can hardly breath when stay together with Eve, he acts like a paranoid. ");
+            }
+        } else {
+            if (sa < 0.5) {
+                System.out.println("Eve sometimes can release the Adam's stress that the environment give him. ");
+            } else if (sa >= 0.5 && sa < 1) {
+                System.out.println("Eve tries many times to tell Adam that nobody will hurt him. Adam still cannot make himself relieved. ");
+            } else if (sa >= 1) {
+                System.out.println("Eve does her best to get Adam out of the vortex of insecure. It works somehow though, but still has long way to go. ");
+            }
+        }
+
+        //social changes result output texts
+        int soo = Math.abs(socialAfterOpposite - socialAfterSelf);
+        int sooo = Math.abs(socialAfterSelf);
+        double so = soo * 1.0/sooo;
+
+        if (socialAfterOpposite >= 0 && socialAfterOpposite - socialAfterSelf >= 0) {
+            if (so < 0.5) {
+                System.out.println("Eve often takes Adam out for a party, and Adam seems enjoying it. ");
+            } else if (so >= 0.5 && so < 1) {
+                System.out.println("Eve does not hesitate to introduce Adam to all her friends that makes Adam happy indeed. ");
+            } else if (so >= 1) {
+                System.out.println("Party queen Eve meets her new King Adam recently with her constantly efforts of invoking Adam's desire of social.");
+            }
+        } else if (socialAfterOpposite >= 0 && socialAfterOpposite - socialAfterSelf < 0) {
+            if (so < 0.5) {
+                System.out.print("Adam hangs out quite a lot but would never calls Eve. ");
+            } else if (so >= 0.5 && so < 1) {
+                System.out.println("Playful Adam never can understand the aloof of Eve, but he is influenced obviously. Now he accepts a quite weekend at home sometimes. ");
+            } else if (so >= 1) {
+                System.out.println("Adam want to have a break and meet some new friends while Eve always try to sabotage the relationships between him adn his friends. ");
+            }
+        } else if (socialAfterOpposite < 0 && socialAfterOpposite - socialAfterSelf <= 0) {
+            if (so < 0.5) {
+                System.out.println("Adam do not want meet new people. Luckily, he meets the same quite Eve. ");
+            } else if (so >= 0.5 && so < 1) {
+                System.out.println("Eve constraint Adam so much, whatever, Adam now do not need social life like he used to be. ");
+            } else if (so >= 1) {
+                System.out.println("Adam feels meeting Eve is like walking in a silent cave: Maybe soliloquize at first, then completely mute at last because of the lack of response. ");
+            }
+        } else {
+            if (so < 0.5) {
+                System.out.println("Eve likes to inspire the speechless Adam to talks, but barely works.");
+            } else if (so >= 0.5 && so < 1) {
+                System.out.println("Adam always feel himself in a noisy flea market when being with Eve, which makes him hard to bear. ");
+            } else if (so >= 1) {
+                System.out.println("Eve makes Adam feel that he is done with social life, Eve fulfills all his social needs and makes him never want to talk to anyone else.");
             }
         }
     }
